@@ -80,7 +80,7 @@
 
         <li
           class="Results-item"
-          v-for="(result, i) in results"
+          v-for="(result, i) in reverseResults"
           :key="i">
 
           <div class="Results-button">
@@ -124,6 +124,13 @@ export default {
       results: [],
       formula: 'd20',
       error: '',
+    }
+  },
+
+  computed: {
+
+    reverseResults() {
+      return this.results.slice().reverse()
     }
   },
 
