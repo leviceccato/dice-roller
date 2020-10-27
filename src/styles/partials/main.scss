@@ -1,0 +1,63 @@
+@use '../config/globals' as *;
+@use '../utilities/resize' as *;
+
+.Main {
+  flex: 1;
+  @include resize(margin-top, 40px, 85px);
+
+  &-back {
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    position: relative;
+    line-height: 1;
+    margin-left: -8px;
+    font-size: 16px;
+    padding: 10px 10px 10px 35px;
+
+    &:hover {
+      color: g(sec-col);
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px transparentize(g(sec-col), 0.65);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      width: 15px;
+      height: 2px;
+      transform: translateY(-50%);
+      background-color: currentColor;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 10px;
+      height: 8px;
+      width: 8px;
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+      border-left: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+    }
+  }
+
+  &-heading {
+    font-weight: 300;
+    margin: 0;
+    @include resize(margin-top, 25px, 45px);
+    @include resize(font-size, 30px, 45px);
+  }
+
+  &-paragraph {
+    line-height: 1.55;
+    margin-bottom: 0;
+    @include resize(font-size, 17px, 21px);
+  }
+}

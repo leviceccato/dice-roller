@@ -1,0 +1,14 @@
+@use '../config/globals' as *;
+@use '../utilities/resize' as *;
+
+.Footer {
+  text-align: center;
+  font-size: 17px;
+  color: transparentize(g(fg-col), 0.2);
+  @include resize(padding-top padding-bottom, 25px, 45px);
+
+  &-icon {
+    vertical-align: text-bottom;
+    margin: 0 0.15em;
+  }
+}

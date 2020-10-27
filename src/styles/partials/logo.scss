@@ -1,0 +1,29 @@
+@use '../config/globals' as *;
+
+.Logo {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: -10px;
+
+  &:hover {
+    color: g(sec-col);
+  }
+
+  &-dieContainer {
+    margin-left: -14px;
+    margin-top: -7px;
+    margin-bottom: -7px;
+    width: 75px;
+    height: 75px;
+  }
+  
+  &-text {
+    margin-left: 4px;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px transparentize(g(sec-col), 0.65);
+  }
+}

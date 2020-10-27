@@ -1,0 +1,8 @@
+@use '../utilities/resize' as *;
+
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include resize(padding-top, 20px, 45px);
+}

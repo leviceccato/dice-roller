@@ -1,0 +1,15 @@
+@use '../config/globals' as *;
+
+.InlineLink {
+  padding: 0.2em;
+  margin: -0.2em;
+
+  &:hover {
+    color: g(sec-col);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px transparentize(g(sec-col), 0.65);
+  }
+}

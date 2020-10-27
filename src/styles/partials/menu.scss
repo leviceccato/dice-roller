@@ -1,0 +1,43 @@
+.Menu {
+  $this: &;
+  display: block;
+  width: 45px;
+  height: 45px;
+  position: relative;
+
+  &.active {
+
+    #{$this}-bar {
+
+      &.bar1 {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      &.bar2 {
+        display: none;
+      }
+
+      &.bar3 {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+  }
+
+  &-bar {
+    position: absolute;
+    width: 16px;
+    height: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: currentColor;
+
+    &.bar1 {
+      transform: translate(-50%, calc(-50% - 5px));
+    }
+
+    &.bar2 {
+      transform: translate(-50%, calc(-50% + 5px));
+    }
+  }
+}

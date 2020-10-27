@@ -1,0 +1,32 @@
+/**
+ * 
+ *  Global Variable Definitions and Getter
+ *  --------------------------------------
+ * 
+ *  Set up an easier method of storing and accesing global variables for your styles.
+ * 
+ *  Usage:
+ * 
+ *  .header {
+ *    background-color: g(bg-col);
+ *  }
+ * 
+ */
+
+$_globals: (
+
+  // Colours
+  fg-col: #152357,
+  bg-col: #f4dfc3, 
+  pri-col: #e41e26,
+  sec-col: #2f59a7,
+  ter-col: #d3e3f4,
+  
+  // Typography
+  font-stack-copy: ('Manrope', 'Helvetica Neue', 'Roboto', 'Arial', 'sans-serif'),
+
+);
+ 
+@function g($key) {
+  @return map-get($_globals, $key);
+}

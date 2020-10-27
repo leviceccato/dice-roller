@@ -1,0 +1,83 @@
+@use '../config/globals' as *;
+@use '../utilities/resize' as *;
+@use 'sass:color';
+
+.Results {
+  @include resize(margin-top, 25px, 70px);
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-clear {
+    letter-spacing: 0.06em;
+    line-height: 1;
+    text-transform: uppercase;
+    padding: 10px;
+    margin-right: -10px;
+    margin-bottom: -5px;
+    @include resize(font-size, 17px, 19px);
+
+    &:hover {
+      color: g(sec-col);
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px transparentize(g(sec-col), 0.65);
+    }
+  }
+
+  &-list {
+    margin: 0;
+    padding: 0;
+    border: 2px solid currentColor;
+    background-color: white;
+    list-style: none;
+    position: relative;
+    @include resize(margin-top, 10px, 15px);
+  }
+
+  &-empty {
+    display: flex;
+    align-items: center;
+    border: 2px dashed transparentize(g(sec-col), 0.65);
+    @include resize(margin-top, 10px, 15px);
+    @include resize(padding-left padding-right, 10px, 20px);
+    @include resize(min-height, 50px, 65px);
+    @include resize(font-size, 20px, 25px);
+  }
+
+  &-item {
+    border-bottom: 2px solid color.mix(g(fg-col), g(ter-col), 10%);
+    @include resize(font-size, 20px, 25px);
+  }
+
+  &-button {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    @include resize(padding, 10px, 20px);
+    @include resize(min-height, 50px, 65px);
+  }
+
+  &-roll {
+    white-space: nowrap;
+  }
+
+  &-formula {
+    white-space: nowrap;
+    margin-left: 1.2em;
+    font-size: 0.7em;
+    color: transparentize(g(fg-col), 0.3);
+  }
+
+  &-timestamp {
+    margin-left: 1.2em;
+    font-size: 0.7em;
+    color: transparentize(g(fg-col), 0.3);
+  }
+}

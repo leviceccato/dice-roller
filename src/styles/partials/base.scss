@@ -1,0 +1,74 @@
+@use '../config/globals' as *;
+
+::-moz-selection {
+  background-color: transparentize(g(pri-col), 0.7);
+}
+
+::selection {
+  background-color: transparentize(g(pri-col), 0.7);
+}
+
+::before::selection {
+  background-color: transparentize(g(pri-col), 0.7);
+}
+
+::after::selection {
+  background-color: transparentize(g(pri-col), 0.7);
+}
+
+@font-face {
+  font-family: Korinna;
+  src:
+    url('/korinna.woff2') format('woff2'),
+    url('/korinna.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+// ::-webkit-scrollbar {
+//   width: 15px;
+// }
+
+// ::-webkit-scrollbar-track {
+//   border: solid 3px transparent;
+//   background-color: g(fg-col);
+// }
+
+// ::-webkit-scrollbar-thumb {
+//   // box-shadow: inset 0 0 0 2px currentColor;
+//   border-left: solid 2px transparent;
+//   border-right: solid 2px transparent;
+//   background-color: g(bg-col);
+//   background-clip: content-box;
+
+//   &:hover {
+//     background-color: g(ter-col);
+//   }
+// }
+
+html {
+  background-color: g(bg-col);
+}
+
+body {
+  color: g(fg-col);
+  font-family: Korinna;
+  -webkit-font-smoothing: antialiased; // Fixes bold looking fonts on macOS in Chrome & Safari
+  -moz-osx-font-smoothing: grayscale; // Fixes bold looking fonts on macOS in Firefox
+  overflow-y: scroll; // Always show vertical scrollbar to avoid layout jitter
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 0;
+  appearance: none;
+}
