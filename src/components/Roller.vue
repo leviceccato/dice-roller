@@ -203,7 +203,10 @@ export default {
           diceCount = diceCount !== '' ? parseInt(diceCount) : 1
           diceType = diceType !== '' ? parseInt(diceType) : 20
 
-          tokenResult = diceCount * (Math.floor(Math.random() * diceType) + 1)
+          tokenResult = 0
+          for (let j = 0; j < diceCount; j++) {
+            tokenResult += (Math.floor(Math.random() * diceType) + 1)
+          }
 
         } else {
 
