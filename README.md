@@ -1,12 +1,31 @@
-# Dice Roller App
+<img alt="Screenshot" src="https://raw.githubusercontent.com/leviceccato/dice-roller/master/screenshot.png">
 
-```bash
-# install dependencies
-$ npm install
+# Dice Roller
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+🎲 A dice roll calculating app for RPGs, built with Nuxt. Check it out at [https://dice-roller-nuxt.netlify.app](https://dice-roller-nuxt.netlify.app).
 
-# generate static project
-$ npm run generate
+## Usage
+
+### Requirements
+
+- Node 14
+
+### Development
+
+Install dependencies
+
+```shell
+npm i
+```
+
+Run development server on [https://localhost:3000](https://localhost:3000)
+
+```shell
+npm run dev
+```
+
+Build plugin into `dist` folder
+
+```shell
+npm run generate
 ```
